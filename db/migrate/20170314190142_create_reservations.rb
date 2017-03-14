@@ -7,6 +7,7 @@ class CreateReservations < ActiveRecord::Migration[5.0]
       t.string  :address
       t.date    :date
       t.string  :time
+      t.string  :phone
 
       t.timestamps
     end
