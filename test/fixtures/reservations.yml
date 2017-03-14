@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total: 1.5
+  name: MyString
+  address: MyString
+  date: 2017-03-14
+  time: MyString
+
+two:
+  total: 1.5
+  name: MyString
+  address: MyString
+  date: 2017-03-14
+  time: MyString
