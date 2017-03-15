@@ -2,8 +2,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<div class="social">
+  <ul>
+      <li><%= link_to "",   'https://www.facebook.com/', :class=>"icon-facebook" %></li>
+      <li><%= link_to "",   'https://www.whatsapp.com/', :class=>"icon-whatsapp" %></li>
+      <li><%= link_to "",   'https://www.gmail.com/', :class=>"icon-mail2" %></li>
+  </ul>
+</div>
+
+
 <div class="div-home">
-  <button type="button" class="btn btn-lg btn-here">Elige tu paquete aqui!</button>
+  <%= video_tag("video1.mp4", autoplay: true, muted:true, loop: true) %>
+  <button type="button" class="btn btn-lg btn-here center-block">Elige tu paquete aqui!</button>
 </div>
 
 <div class="div-packs">
@@ -44,7 +54,7 @@
 
 
 
-<div class="container">
+<div class="col-xs-12 div-gallery container">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -59,16 +69,16 @@
       <div class="item active">
         <ul class="gallery-row">
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
     </ul>
       </div>
@@ -76,16 +86,16 @@
       <div class="item">
         <ul class="gallery-row">
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
     </ul>
       </div>
@@ -93,13 +103,16 @@
       <div class="item">
         <ul class="gallery-row">
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
         <li class="">
-            <img class="col-xs-3" src="http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", class: "col-xs-3") %>
         </li>
     </ul>
       </div>
