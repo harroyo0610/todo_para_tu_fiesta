@@ -15,9 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-
-   $('li img').on('click',function(){
+function imgclick(){
+    $('li img').on('click',function(){
         var src = $(this).attr('src');
         var img = '<img src="' + src + '" class="img-responsive"/>';
         $('#myModal').modal();
@@ -28,5 +27,6 @@ $(document).ready(function(){
             $('#myModal .modal-body').html('');
         });
    });
-})
+}
+
 

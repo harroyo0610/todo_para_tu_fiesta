@@ -151,17 +151,32 @@ iframe{
   background-color: #3b5998;
 }
 .social ul li .icon-whatsapp{
-  background-color: #34AF23
+  background-color: #34AF23;
 }
 .social ul li .icon-mail2{
-  background-color: #ff4343
+  background-color: #ff4343;
 }
 
 .social ul li a:hover{
   padding: 10px 10px 10px 150px;
 }
 
+.btn-submit-pack{
+  background: #d93434;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #fafafa;
+  font-size: 24px;
+  padding: 0 30px 20px 30px;
+  text-decoration: none;
+}
 
+.btn-submit-pack:hover {
+  background-color: #009933;
+  text-decoration: none;
+}
 /*Video back*/
 video { 
     position: absolute;
