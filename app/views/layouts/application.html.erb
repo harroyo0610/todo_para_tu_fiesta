@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <nav class=" nav-nav">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Inicio",   '#', :class=>"linki" %></li>
+          <li><%= link_to "Paquetes",   '#', :class=>"linki" %></li>
+          <li><%= link_to "Gallery", '#', :class=>"linki" %></li>
+          <li><%= link_to "About", '#', :class=>"linki" %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Login", '#', :class=>"linki" %></li>
+          <li><%= link_to "Logout", '#', :class=>"linki" %></li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
