@@ -1,0 +1,4 @@
+Hola <%= @user.name %>
+Bienvenido a "Todo para Tu Fiesta App!, haz click en el link de abajo para activar tu cuenta:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
