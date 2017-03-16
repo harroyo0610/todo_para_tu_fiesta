@@ -37,6 +37,14 @@
           <li><%= link_to "Registrarse", signup_path, :class=>"linki" %></li>
        
         <% end %>
+          <li><%= link_to "Inicio", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+          <li><%= link_to "Paquetes", { controller: "packages", action: "index" }, class: "link_nav" %></li>
+          <li><%= link_to "Gallery", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+          <li><%= link_to "About", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Login", '#', class: "link_nav"%></li>
+          <li><%= link_to "Logout", '#', class: "link_nav" %></li>
         </ul>
       </div>
     </nav>
