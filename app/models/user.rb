@@ -32,9 +32,6 @@ class User < ApplicationRecord
 	#regresa true si el token coincide con el de la base de datos
 	def authenticated?(attribute, token)
 		digest = send("#{attribute}_digest")
-		p ".-." * 50
-		p digest
-		p digest.nil?
 		return false if digest.nil?
 		BCrypt::Password.new(digest).is_password?(token)			
 	end
