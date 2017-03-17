@@ -17,19 +17,50 @@
     <nav class=" nav-nav">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
+<<<<<<< HEAD
           <li><%= link_to "Inicio",{ controller: "partys", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "Paquetes", { controller: "packages", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "Gallery", { controller: "partys", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "About", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+=======
+          <li><%= link_to "Inicio",   root_path, :class=>"linki" %></li>
+          <li><%= link_to "Paquetes",   '#', :class=>"linki" %></li>
+          <li><%= link_to "Gallery", '#', :class=>"linki" %></li>
+          <li><%= link_to "About", '#', :class=>"linki" %></li>
+>>>>>>> c9081a57060910e5234a41662c3cfd98773c8598
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Login", '#', class: "link_nav"%></li>
-          <li><%= link_to "Logout", '#', class: "link_nav" %></li>
-        </ul>
+          <% if logged_in? %>
+           <li><%= link_to "Carrito",  '#', :class=>"linki" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Cuenta <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Perfil", current_user, :class=>"linki" %></li>
+              <li><%= link_to "Actualizar", edit_user_path(current_user), :class=>"linki"%></li>
+              <li><%= link_to "Salir", logout_path, method: "delete", :class=>"linki" %></li>
+            </ul>
+          </li>
+        <% else %>        
+          <li><%= link_to "Entrar",  login_path , :class=>"linki" %></li>
+          <li><%= link_to "Registrarse", signup_path, :class=>"linki" %></li>
+        <% end %>
       </div>
     </nav>
+<<<<<<< HEAD
    
       <%= yield %>
 
+=======
+    <div class="container">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+      </div> 
+    <%= yield %>
+>>>>>>> c9081a57060910e5234a41662c3cfd98773c8598
   </body>
 </html>
+
+

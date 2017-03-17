@@ -29,7 +29,7 @@ class PasswordResetsController < ApplicationController
     elsif @user.update_attributes(user_params)          # Case (4)
       log_in @user
       flash[:success] = "Password has been reset."
-      redirect_to @user
+      redirect_to root_url
     else
       render 'edit'                                     # Case (2)
     end
@@ -49,6 +49,12 @@ class PasswordResetsController < ApplicationController
 
     # Confirms a valid user.
     def valid_user
+    p "*" * 50
+    p @user
+    p "+" * 50
+    p @user.activated?
+    p "-" * 50
+    p @user.authenticated?(:reset, params[:id])
      unless (@user && @user.activated? && !@user.authenticated?(:reset, params[:id]))
         redirect_to root_url
       end
@@ -56,6 +62,8 @@ class PasswordResetsController < ApplicationController
 
     # Checks expiration of reset token.
     def check_expiration
+    p "x" * 100
+    p @user.password_reset_expired?
       if @user.password_reset_expired?
         flash[:danger] = "Password reset has expired."
         redirect_to new_password_reset_url
