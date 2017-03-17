@@ -4,6 +4,12 @@ class PackagesController < ApplicationController
   end
 
   def create
-    p user_package = params[:package]
+    @user_package = params[:package]
+    if logged_in?
+      redirect_to controller: 'tickets', action: 'index', params: @user_package
+    else
+      redirect_to login_url
+    end
+    
   end
 end
