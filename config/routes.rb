@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #devise_for :users
   root 'partys#index'
   get     '/signup',   to:  'users#new'
   get    'packages'  => 'packages#index'

@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(user) : forget(user) #metodo para recordar al token del usuario
         redirect_to root_url #redirige a la pagina de perfil del usuario
       else
-        message = "Account not activated."
-        message += "Check your email for the activation link"
+        message = "Cuenta no Activada"
+        message += "Verifica tu bandeja de entrada para activa tu cuenta "
         flash[:warning] = message 
         redirect_to root_url
      end 
     else
-      flash.now[:danger]= "Invalid email/password combination"
+      flash.now[:danger]= "Combinacion de email/contraseña invalido"
       render 'new'
     end
   end

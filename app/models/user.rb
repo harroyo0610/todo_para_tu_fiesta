@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # devise :database_authenticatable, :registerable,
+  #        :recoverable, :rememberable, :trackable, :validatable
 	#se utiliaza para tener acceso al atributo antes de salvarlo
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
