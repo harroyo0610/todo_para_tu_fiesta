@@ -2,20 +2,32 @@
 <html>
   <head>
     <title>AllParty</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   </head>
 
-  <body>
+<body>
     <nav class=" nav-nav">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
+<<<<<<< HEAD
+          <li><%= link_to "Inicio",{ controller: "partys", action: "index" }, class: "link_nav" %></li>
+          <li><%= link_to "Paquetes", { controller: "packages", action: "index" }, class: "link_nav" %></li>
+          <li><%= link_to "Gallery", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+          <li><%= link_to "About", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+=======
           <li><%= link_to "Inicio",   root_path, :class=>"linki" %></li>
           <li><%= link_to "Paquetes",   '#', :class=>"linki" %></li>
           <li><%= link_to "Gallery", '#', :class=>"linki" %></li>
           <li><%= link_to "About", '#', :class=>"linki" %></li>
+>>>>>>> c9081a57060910e5234a41662c3cfd98773c8598
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
@@ -36,12 +48,18 @@
         <% end %>
       </div>
     </nav>
+<<<<<<< HEAD
+   
+      <%= yield %>
+
+=======
     <div class="container">
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
         <% end %>
       </div> 
     <%= yield %>
+>>>>>>> c9081a57060910e5234a41662c3cfd98773c8598
   </body>
 </html>
 

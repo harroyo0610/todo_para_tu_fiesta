@@ -222,6 +222,37 @@ video {
 }
 
 
+<<<<<<< HEAD
+
+
+
+
+/*modal*/
+
+#modal2 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalconent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 80%;
+    padding: 20px;
+}
+
+
+
+/*packs*/
+=======
 /* sidebar */
 
 aside {
@@ -362,4 +393,5 @@ p{
   line-heigth: 1.7em;
 }
 
+>>>>>>> c9081a57060910e5234a41662c3cfd98773c8598
 
