@@ -1,8 +1,9 @@
 class PackagesController < ApplicationController
   def index
-    
+     
   end
+
   def create
-    p params[:package]
+    p user_package = params[:package]
   end
 end

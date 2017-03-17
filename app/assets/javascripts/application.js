@@ -15,6 +15,26 @@
 //= require turbolinks
 //= require_tree .
 
+
+    var app = angular.module('myApp', []);
+    app.controller('myController', function($scope) {
+        $scope.num_person_mix = 0;
+        $scope.num_glass_mix = 0;
+        $scope.num_person = 0;
+        $scope.num_glass = 0;
+        $scope.total = 0;
+    });
+
+
+function indexModal(){
+    $("#modal2").hide();
+    // if ($.cookie('#modal2') == null) {
+    //     $.cookie('#modal2', 'yes', { expires: 2, path: '/' });
+    //     $('#modal2').reveal();
+    // }
+}
+
+
 function imgclick(){
     $('li img').on('click',function(){
         var src = $(this).attr('src');
@@ -28,5 +48,4 @@ function imgclick(){
         });
    });
 }
-
 
