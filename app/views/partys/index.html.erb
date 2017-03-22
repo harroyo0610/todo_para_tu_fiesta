@@ -1,0 +1,165 @@
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="social">
+  <ul>
+      <li><%= link_to "",   'https://www.facebook.com/', :class=>"icon-facebook" %></li>
+      <li><%= link_to "",   'https://www.whatsapp.com/', :class=>"icon-whatsapp" %></li>
+      <li><%= link_to "",   'https://www.gmail.com/', :class=>"icon-mail2" %></li>
+  </ul>
+</div>
+
+
+<div class="div-home ">
+  <%= video_tag("video1.webm", autoplay: true, muted:true, loop: true)%>
+
+  <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index" }, class: "btn btn-lg btn-here center-block" %>
+</div>
+
+<div class="div-packs">
+  <div class="container">
+    <h1 class="text-center col-xs-12">Elige un paquete</h1>
+    <div class="col-xs-12">
+      <div class="div-details-packs col-xs-3 col-xs-offset-1">
+        <h3 class="text-center">Paquete Mix</h3>
+        <p class="text-center">Aquì encontraras los paquetes que son para cotizar tu mix</p>
+        <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index" }, class: "btn btn-lg btn-packs center-block" %>
+      </div>
+      
+      <div class="div-details-packs col-xs-3 col-xs-offset-1">
+        <h3 class="text-center">Paquete Cerveza</h3>
+        <p class="text-center">Aquì encontraras los paquetes que son para cotizar tu alcohol</p>
+        <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index"}, class: "btn btn-lg btn-packs center-block" %>
+      </div>
+
+      <div class="div-details-packs col-xs-3 col-xs-offset-1">
+        <h3 class="text-center">Paquete Asado</h3>
+        <p class="text-center">Aquì encontraras los paquetes que son para cotizar tu asado</p>
+        <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index" }, class: "btn btn-lg btn-packs center-block" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+<div id="div-gallery" class="col-xs-12 div-gallery container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <ul class="gallery-row">
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" ,class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+    </ul>
+      </div>
+
+      <div class="item">
+        <ul class="gallery-row">
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+    </ul>
+      </div>
+    
+      <div class="item">
+        <ul class="gallery-row">
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+        <li class="">
+            <%= image_tag("02.jpg", onclick: "imgclick()" , class: "col-xs-3") %>
+        </li>
+    </ul>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+
+  </div>
+</div>
+
+
+
+
+<div id="div-about" class="div-about col-xs-12 ">
+  <iframe class="col-xs-offset-1 col-xs-6" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.908182579527!2d-101.17793108475776!3d20.5918069079263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c84d9a015b219%3A0x1788951ab4955a5f!2sPaseo+de+Las+Playas+140%2C+Las+Reynas%2C+36720+Salamanca%2C+Gto.!5e0!3m2!1ses!2smx!4v1489540331335" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div class="contact col-xs-offset-1 col-xs-4">
+    <h4 >Contacto: </h4>
+    <h4 >Numero telefonico</h4>
+    <h4 >Numero telefonico</h4>
+    <h4 >Numero telefonico</h4>
+  </div>
+   <h5 class="text-center col-xs-12"><strong>Todos los derechos reservados 2017 de Todo para tu fiesta es una marca registrada</strong></h5>
+
+</div>
+
+
+</div>
+
+
+<!-- 
+<div id="modal2">
+    <div class="modalconent">
+        <h2>Eres mayor de edad?</h2>
+        <a href="https://www.google.com.mx/"><button id="button">No</button></a>
+       <button id="button" onclick="indexModal()">Sí</button>
+    </div>
+</div>
+
+ -->
+
+
+
+
+
+
+
+
+
+
