@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post    '/login',    to:  'sessions#create'
   delete  '/logout',   to:  'sessions#destroy'
   
+  #get '/contacts',     to: 'contacts#new'
+  resources "contacts", only: [:new, :create]
   resources :partys
   resources :users 
   resources :account_activations, only: [:edit]
