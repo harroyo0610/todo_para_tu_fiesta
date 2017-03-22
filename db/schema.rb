@@ -10,27 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170321234658) do
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170321221925) do
-=======
-ActiveRecord::Schema.define(version: 20170317195330) do
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
->>>>>>> d527ea55a307e3baff05aa1c49d667b6cbb886d4
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-=======
-<<<<<<< HEAD
   create_table "packages", force: :cascade do |t|
     t.integer  "persons"
     t.integer  "glass_person"
@@ -41,9 +30,6 @@ ActiveRecord::Schema.define(version: 20170317195330) do
     t.datetime "updated_at",   null: false
   end
 
-=======
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
->>>>>>> d527ea55a307e3baff05aa1c49d667b6cbb886d4
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.float    "amount"
@@ -63,20 +49,12 @@ ActiveRecord::Schema.define(version: 20170317195330) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
-<<<<<<< HEAD
-    t.string   "status"
-=======
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
     t.float    "total"
     t.string   "name"
     t.string   "address"
     t.date     "date"
     t.string   "time"
     t.string   "phone"
-<<<<<<< HEAD
-    t.string   "checkbox"
-=======
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
@@ -94,8 +72,6 @@ ActiveRecord::Schema.define(version: 20170317195330) do
     t.datetime "updated_at",                          null: false
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
-<<<<<<< HEAD
-=======
     t.string   "provider"
     t.string   "uid"
     t.string   "encrypted_password",     default: "", null: false
@@ -107,7 +83,6 @@ ActiveRecord::Schema.define(version: 20170317195330) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
->>>>>>> d527ea55a307e3baff05aa1c49d667b6cbb886d4
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
