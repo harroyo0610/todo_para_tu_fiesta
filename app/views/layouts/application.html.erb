@@ -19,8 +19,14 @@
         <ul class="nav navbar-nav">
           <li><%= link_to "Inicio",{ controller: "partys", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "Paquetes", { controller: "packages", action: "index" }, class: "link_nav" %></li>
+<<<<<<< HEAD
+=======
           <li><%= link_to "Gallery", { controller: "partys", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "About", { controller: "partys", action: "index" }, class: "link_nav" %></li>
+<<<<<<< HEAD
+=======
+>>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
+>>>>>>> d527ea55a307e3baff05aa1c49d667b6cbb886d4
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
@@ -41,6 +47,19 @@
         <% end %>
       </div>
     </nav>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <p class = "notice"><%= notice %>
+    <p class= = "alert"><%= alert %>
+=======
+<<<<<<< HEAD
+    <p class = "notice"><%= notice %>
+    <p class= = "alert"><%= alert %>
+=======
+>>>>>>> 236efef0e9e550b72771cfb6a7d12d39662e94ac
+>>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
+>>>>>>> d527ea55a307e3baff05aa1c49d667b6cbb886d4
     <div class="container">
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>

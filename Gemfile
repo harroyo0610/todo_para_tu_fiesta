@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'omniauth-facebook'
-
+gem 'devise'
 gem 'bcrypt'
 
 gem 'will_paginate'
