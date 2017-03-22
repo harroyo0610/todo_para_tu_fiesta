@@ -133,15 +133,15 @@
     <h3>Contacto<h3>
     <%= form_for Contact.new, :html => {:class => 'form-horizontal' } do |f| %>
     
-    <%= f.input :name, :required => true, class: 'form-control' %>
-    <%= f.input :email, :required => true, class: 'form-control'%>
-    <%= f.input :message, :as => :text, :required => true, class:'form-control' %>
+    <%= f.text_field :name, :required => true, class: 'form-control' %>
+    <%= f.text_field :email, :required => true, class: 'form-control'%>
+    <%= f.text_field :message, :as => :text, :required => true, class:'form-control' %>
     <div class= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
     </div>
     <div>
       </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+      <%= f.submit "Enviar Mensaje", class: "btn btn-primary" %>
     </div>
   <% end %>
 
@@ -149,29 +149,9 @@
    <h5 class="text-center col-xs-12"><strong>Todos los derechos reservados 2017 de Todo para tu fiesta es una marca registrada</strong></h5>
 
 </div>
-
-
 </div>
 
 
-<<<<<<< HEAD
-<!-- 
-=======
-
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
-<div id="modal2">
-    <div class="modalconent">
-        <h2>Eres mayor de edad?</h2>
-        <a href="https://www.google.com.mx/"><button id="button">No</button></a>
-       <button id="button" onclick="indexModal()">Sí</button>
-    </div>
-</div>
-
-<<<<<<< HEAD
- -->
-=======
-
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
 
 
 

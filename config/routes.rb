@@ -12,9 +12,6 @@ Rails.application.routes.draw do
   resources :packages do
     resources :tickets
   end
-  resources :packages
-  resources :partys
-  resources :tickets
   resources :users 
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
