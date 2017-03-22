@@ -1,0 +1,41 @@
+<h1>Detalles de tu compra</h1>
+<br><br><br><br>
+<h3 class="text-left col-md-offset-2">Numero de personas:  <%= @details.persons%> personas</h3>
+<%if @details.glass_person%>
+  <h3 class="text-left col-md-offset-2">Numero de vasos por persona:  <%= @details.glass_person %> vasos aproximadamente</h3>
+  <h3 class="text-left col-md-offset-2">Tamaño de vaso elegido:  <%= @details.size %></h3>
+<%end%>
+
+<%if @details.meat%>
+  <h3 class="text-left col-md-offset-2">Corte con el que acompañara su arrachera:  <%= @details.meat %></h3>
+<%end%>
+
+  <h3 class="text-left col-md-offset-2">El total de tu compra es: <%= @details.total%>0 mxn</h3>
+  <br><br><br>
+
+  <div class="col-xs-5 col-md-offset-2 ">
+    <%= form_for :ticket , url: package_tickets_path do |f| %>
+      <%= f.label "El servicio esta a nombre de:" %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <br>
+      <%= f.label "Direcciòn del evento:" %>
+      <%= f.text_field :address, class: 'form-control' %>
+      <br>
+      <%= f.label "Fecha del evento:" %>
+      <%= f.date_field :date, class: '' %>
+      <br><br>
+      <%= f.label "Hora del evento:" %>
+      <%= f.time_field :time, class: 'form-control' %>
+      <br>
+      <%= f.label "Nùmero telefònico:" %>
+      <%= f.text_field :phone, class: 'form-control' %>
+      <br>
+      <%= f.hidden_field :status, value: "seleccionado", class: 'form-control' %>
+      <%= f.hidden_field :total, value: @details.total, class: 'form-control' %>
+      <br><br>
+      <%= f.check_box :checkbox, class: 'col-xs-1' %> Soy mayor de edad
+      <br><br>
+      <%= f.submit "Comprar Paquete", :class => "btn-submit-pack", :total=> @details ,data: { confirm: 'Esta usted seguro?' } %>
+    <% end %>
+  </div>
+
