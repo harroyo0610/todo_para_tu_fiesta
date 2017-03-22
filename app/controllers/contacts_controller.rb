@@ -13,10 +13,6 @@ class ContactsController < ApplicationController
     else
       flash[:error] = 'No se puede enviar este mensaje, favor de verificar que los datos sean correctos'
       redirect_to root_url
-  
-
     end
   end
-
-
 end

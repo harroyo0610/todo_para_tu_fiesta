@@ -1,23 +1,9 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  # devise :database_authenticatable, :registerable,
-  #        :recoverable, :rememberable, :trackable, :validatable
-	#se utiliaza para tener acceso al atributo antes de salvarlo
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
 	before_create :create_activation_digest
-<<<<<<< HEAD
-
   has_many :reservations
-
-=======
-<<<<<<< HEAD
-  has_many :reservations
-=======
->>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
->>>>>>> 495f2788fb267e939f5fb2641300fa8212758ffc
-	#before_save {self.email = email.downcase}
+	before_save {self.email = email.downcase}
 	validates :name, presence: true,  length: {maximum: 50 }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :email, presence: true, length: {maximum: 225 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false}

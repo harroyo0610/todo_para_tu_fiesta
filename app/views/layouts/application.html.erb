@@ -19,28 +19,22 @@
         <ul class="nav navbar-nav">
           <li><%= link_to "Inicio",{ controller: "partys", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "Paquetes", { controller: "packages", action: "index" }, class: "link_nav" %></li>
-<<<<<<< HEAD
-=======
-          <li><%= link_to "Gallery", { controller: "partys", action: "index" }, class: "link_nav" %></li>
-          <li><%= link_to "About", { controller: "partys", action: "index" }, class: "link_nav" %></li>
->>>>>>> 495f2788fb267e939f5fb2641300fa8212758ffc
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
-           <li><%= link_to "Carrito",  '#', :class=>"linki" %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Cuenta <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Perfil", current_user, :class=>"linki" %></li>
-              <li><%= link_to "Actualizar", edit_user_path(current_user), :class=>"linki"%></li>
-              <li><%= link_to "Salir", logout_path, method: "delete", :class=>"linki" %></li>
+              <li><%= link_to "Perfil", current_user, class: "link_nav" %></li>
+              <li><%= link_to "Actualizar", edit_user_path(current_user), class: "link_nav" %></li>
+              <li><%= link_to "Salir", logout_path, method: "delete", class: "link_nav" %></li>
             </ul>
           </li>
         <% else %>        
-          <li><%= link_to "Entrar",  login_path , :class=>"linki" %></li>
-          <li><%= link_to "Registrarse", signup_path, :class=>"linki" %></li>
+          <li><%= link_to "Entrar",  login_path , class: "link_nav" %></li>
+          <li><%= link_to "Registrarse", signup_path, class: "link_nav" %></li>
         <% end %>
       </div>
     </nav>
