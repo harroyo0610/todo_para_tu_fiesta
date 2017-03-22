@@ -1,5 +1,6 @@
 class PackagesController < ApplicationController
   def index
+<<<<<<< HEAD
     @package = Package.new
   end
 
@@ -20,4 +21,18 @@ class PackagesController < ApplicationController
     def package_params
       params.require(:package).permit!
     end
+=======
+     
+  end
+
+  def create
+    @user_package = params[:package]
+    if logged_in?
+      redirect_to controller: 'tickets', action: 'index', params: @user_package
+    else
+      redirect_to login_url
+    end
+    
+  end
+>>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
 end

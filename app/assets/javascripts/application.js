@@ -16,6 +16,7 @@
 //= require_tree .
 
 
+<<<<<<< HEAD
     // var app = angular.module('myApp', []);
     // app.controller('myController', function($scope) {
     //     $scope.num_person_mix = 0;
@@ -33,6 +34,25 @@
 //     //     $('#modal2').reveal();
 //     // }
 // }
+=======
+    var app = angular.module('myApp', []);
+    app.controller('myController', function($scope) {
+        $scope.num_person_mix = 0;
+        $scope.num_glass_mix = 0;
+        $scope.num_person = 0;
+        $scope.num_glass = 0;
+        $scope.total = 0;
+    });
+
+
+function indexModal(){
+    $("#modal2").hide();
+    // if ($.cookie('#modal2') == null) {
+    //     $.cookie('#modal2', 'yes', { expires: 2, path: '/' });
+    //     $('#modal2').reveal();
+    // }
+}
+>>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
 
 
 function imgclick(){
@@ -49,8 +69,11 @@ function imgclick(){
    });
 }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> e67bc5bf1f2bc2c7dbdfa817d49d58142e5695c5
