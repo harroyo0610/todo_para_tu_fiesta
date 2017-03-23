@@ -1,7 +1,22 @@
+<h1>Elige tu forma de pago</h1>
+
 <form target="_blank" name="formularioPago" method="post" action="https://www.pagofacil.net/st/public/Payform">
-<input type="hidden" value="ba3b2748672431ebeebeed1327c14959a94a74be" name="idSucursal">
-<input type="hidden" value="ce4287a4093e4fca1928f2cde9bf041ee7de8292" name="idUsuario">
+<input type="hidden" value="49041a7180a23873dae840bbc4edba9213a58acd" name="idSucursal">
+<input type="hidden" value="dc3d55954e2150e5f0962b167c5016bf9b7b037a" name="idUsuario">
 <input type="hidden" value="1" name="idServicio">
-<input type="hidden" value="1372109726" name="idPedido"> <input type="hidden" value="36" name="monto">
-<input class="" name="submit" type="submit" value="compra">
+<input type="hidden" value="1372109726" name="idPedido"> <input type="hidden" value="<%= Reservation.last.total %>" name="monto">
+<input class="col-xs-2 col-xs-offset-4 btn btn-primary" name="submit" type="submit" value="Pagar con tarjeta de débito o crédito">
 </form>
+
+
+<form class="col-xs-1 col-xs-offset-1" action="https://compropago.com/comprobante" method="post"><input type="hidden" name="public_key" value="pk_test_7576abf251548f6a62"><input type="hidden" name="product_price" value="<%= Reservation.last.total %>"><input type="hidden" name="product_name" value="Paquete"><input type="hidden" name="product_id" value=""><input type="hidden" name="customer_name" value=""><input type="hidden" name="customer_email" value=""><input type="hidden" name="customer_phone" value=""><input type="hidden" name="image_url" value=""><input type="hidden" name="success_url" value=""><input type="hidden" name="failed_url" value=""><input type="submit" class="col-xs-12 col-xs-offset-4 btn btn-primary" value="Paga en oxoo"  border="0" name="submit" alt="Pagar con ComproPago"></form>
+
+<br><br><br><br>
+
+<h1>Detalles de tu compra: </h1>
+<% @reservation = Reservation.last %>
+<h3 class="text-center">Nombre: <%=@reservation.name %></h3>
+<h3 class="text-center">Dirección: <%=@reservation.address %></h3>
+<h3 class="text-center">Fecha: <%=@reservation.date %></h3>
+<h3 class="text-center">Hora: <%=@reservation.time %> hrs</h3>
+<h3 class="text-center">Total: <%=@reservation.total %>0 mxn</h3>

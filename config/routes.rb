@@ -8,10 +8,13 @@ Rails.application.routes.draw do
   
   #get '/contacts',     to: 'contacts#new'
   resources "contacts", only: [:new, :create]
-  resources :partys
   resources :packages do
     resources :tickets
   end
+<<<<<<< HEAD
+=======
+  resources :partys
+>>>>>>> c288aab1a0d56fee3403ad6651650cda2c8140ec
   resources :users 
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]

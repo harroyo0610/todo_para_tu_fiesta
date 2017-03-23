@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170321234658) do
     t.string   "size"
     t.string   "meat"
     t.float    "total"
+    t.string   "type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -49,12 +50,14 @@ ActiveRecord::Schema.define(version: 20170321234658) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
+    t.string   "status"
     t.float    "total"
     t.string   "name"
     t.string   "address"
     t.date     "date"
     t.string   "time"
     t.string   "phone"
+    t.string   "checkbox"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
