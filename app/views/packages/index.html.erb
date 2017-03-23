@@ -14,6 +14,8 @@
       <h3 class="text-center">Arma tu paquete Mix</h3>
       <div class="col-xs-6 col-md-offset-1">
         <%= form_for(@package) do |f| %>
+         <%= render 'shared/error_package'%>
+     
             <%= f.label "Numero de personas para tu evento:" %>
             <%= f.text_field :persons, class: 'form-control' %>
             <br>
@@ -43,6 +45,8 @@
       <h3 class="text-center">Arma tu paquete Cerveza</h3>
       <div class="col-xs-6 col-md-offset-1">
           <%= form_for(@package) do |f| %>
+           <%= render 'shared/error_package' %>
+     
               <%= f.label "Numero de personas para tu evento:" %>
               <%= f.text_field :persons, "ng-model" => "num_person", class: 'form-control' %><br>
               <%= f.label "Numero de vasos de 500ml por persona(aprox):" %>
@@ -62,6 +66,8 @@
       <h3 class="text-center">Arma tu paquete Asado</h3>
       <div class="col-xs-6 col-md-offset-1">
           <%= form_for(@package) do |f| %>
+           <%= render 'shared/error_package' %>
+     
               <%= f.label "Numero de personas para tu evento:" %>
               <%= f.text_field :persons, class: 'form-control' %>
               <br>

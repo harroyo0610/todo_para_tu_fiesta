@@ -9,12 +9,9 @@ class ContactsController < ApplicationController
     if @contact.deliver
       flash[:notice] = 'Gracias por tu mensaje. Estaremos en contacto muy pronto!'
       redirect_to root_url
-  
     else
       flash[:error] = 'No se puede enviar este mensaje, favor de verificar que los datos sean correctos'
       redirect_to root_url
-  
-
     end
   end
 
