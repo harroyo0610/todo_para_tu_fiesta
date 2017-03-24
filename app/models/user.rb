@@ -1,16 +1,10 @@
 class User < ApplicationRecord
-<<<<<<< HEAD
+
   	#se utiliaza para tener acceso al atributo antes de salvarlo
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
 	before_create :create_activation_digest
     has_many :reservations
-=======
-	attr_accessor :remember_token, :activation_token, :reset_token
-	before_save :downcase_email
-	before_create :create_activation_digest
-  has_many :reservations
->>>>>>> c288aab1a0d56fee3403ad6651650cda2c8140ec
 	before_save {self.email = email.downcase}
 	validates :name, presence: true,  length: {maximum: 50 }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

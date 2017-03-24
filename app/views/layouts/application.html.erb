@@ -14,30 +14,55 @@
   </head>
 
 <body>
-    <nav class=" nav-nav">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Inicio",{ controller: "partys", action: "index" }, class: "link_nav" %></li>
+
+  <!-- 
+
+
+   -->
+  <nav class="navbar navbar-default nav-nav" role="navigation">
+    <!-- El logotipo y el icono que despliega el menú se agrupan
+         para mostrarlos mejor en los dispositivos móviles -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Desplegar navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Todo Para Tu Fiesta</a>
+    </div>
+   
+    <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+         otro elemento que se pueda ocultar al minimizar la barra -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Inicio",{ controller: "partys", action: "index" }, class: "link_nav" %></li>
           <li><%= link_to "Paquetes", { controller: "packages", action: "index" }, class: "link_nav" %></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Cuenta <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Perfil", current_user, class: "link_nav" %></li>
-              <li><%= link_to "Actualizar", edit_user_path(current_user), class: "link_nav" %></li>
-              <li><%= link_to "Salir", logout_path, method: "delete", class: "link_nav" %></li>
-            </ul>
-          </li>
-        <% else %>        
-          <li><%= link_to "Entrar",  login_path , class: "link_nav" %></li>
-          <li><%= link_to "Registrarse", signup_path, class: "link_nav" %></li>
-        <% end %>
-      </div>
-    </nav>
+      </ul>   
+      <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Cuenta <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Perfil", current_user, class: "link_nav" %></li>
+                  <li><%= link_to "Actualizar", edit_user_path(current_user), class: "link_nav" %></li>
+                  <li><%= link_to "Salir", logout_path, method: "delete", class: "link_nav" %></li>
+                </ul>
+            </li>
+            <% else %>        
+            <li><%= link_to "Entrar",  login_path , class: "link_nav" %></li>
+            <li><%= link_to "Registrarse", signup_path, class: "link_nav" %></li>
+            <% end %>
+          </ul>
+    </div>
+  </nav>
+   <!-- 
+
+    -->
+
     <div class="container">
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>

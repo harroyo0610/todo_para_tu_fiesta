@@ -28,8 +28,3 @@ function imgclick(){
         });
    });
 }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> c288aab1a0d56fee3403ad6651650cda2c8140ec

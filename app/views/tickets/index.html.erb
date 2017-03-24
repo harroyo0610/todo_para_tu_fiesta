@@ -1,60 +1,40 @@
-<h1>Detalles de tu compra</h1>
-<br><br><br><br>
-<<<<<<< HEAD
+<div class="text-package">
+  <h1>Detalles de tu compra</h1>
+  <br><br><br><br>
+  <h3 class="">Numero de personas:  <%= @details.persons%> personas</h3>
+  <%if @details.glass_person%>
+    <h3 class="">Numero de vasos por persona:  <%= @details.glass_person %> vasos aproximadamente</h3>
+    <h3 class="">Tamaño de vaso elegido:  <%= @details.size %></h3>
+  <%end%>
 
-=======
->>>>>>> c288aab1a0d56fee3403ad6651650cda2c8140ec
-<h3 class="text-left col-md-offset-2">Numero de personas:  <%= @details.persons%> personas</h3>
-<%if @details.glass_person%>
-  <h3 class="text-left col-md-offset-2">Numero de vasos por persona:  <%= @details.glass_person %> vasos aproximadamente</h3>
-  <h3 class="text-left col-md-offset-2">Tamaño de vaso elegido:  <%= @details.size %></h3>
-<%end%>
+  <%if @details.meat%>
+    <h3 class="">Corte con el que acompañara su arrachera:  <%= @details.meat %></h3>
+  <%end%>
 
-<%if @details.meat%>
-  <h3 class="text-left col-md-offset-2">Corte con el que acompañara su arrachera:  <%= @details.meat %></h3>
-<%end%>
-
-  <h3 class="text-left col-md-offset-2">El total de tu compra es: <%= @details.total%>0 mxn</h3>
-  <br><br><br>
-
-  <div class="col-xs-5 col-md-offset-2 ">
+    <h3 class="">El total de tu compra es: <%= @details.total %>0 mxn</h3>
+    <br><br><br>
+</div>
+  <div class="col-md-offset-4 col-md-5 col-xs-10 col-xs-offset-1">
     <%= form_for @reservation, url: package_tickets_path do |f| %>
       <%= render 'shared/error_reservation'%>
       <%= f.label "El servicio esta a nombre de:" %>
-      <%= f.text_field :name, class: 'form-control' %>
-      <br>
+      <%= f.text_field :name, class: 'form-control col-xs-4 ' %>
+      <br><br><br><br>
       <%= f.label "Direcciòn del evento:" %>
-      <%= f.text_field :address, class: 'form-control' %>
-      <br>
+      <%= f.text_field :address, class: 'form-control col-xs-4 ' %>
+      <br><br><br><br>
       <%= f.label "Fecha del evento:" %>
-      <%= f.date_field :date, class: 'form-control' %>
-      <br><br>
+      <%= f.date_field :date, class: 'form-control col-xs-4 ' %>
+      <br><br><br><br><br>
       <%= f.label "Hora del evento:" %>
-      <%= f.time_field :time, class: 'form-control' %>
-      <br>
+      <%= f.time_field :time, class: 'form-control col-xs-4 ' %>
+      <br><br><br><br><br>
       <%= f.label "Nùmero telefònico:" %>
-      <%= f.text_field :phone, class: 'form-control' %>
-      <br>
+      <%= f.text_field :phone, class: 'form-control col-xs-4 ' %>
+      <br><br><br><br>
       <%= f.hidden_field :status, value: "seleccionado" %>
-      <br><br>
-      <%= f.submit "Comprar Paquete", :class => "btn-submit-pack", :total => @details ,data: { confirm: 'Esta usted seguro?' } %>
+      <br>
+      <%= f.submit "Comprar Paquete", :class => "btn-payment col-xs-offset-3 col-xs-6", :total => @details %>
     
     <% end %>
   </div>
-
-<<<<<<< HEAD
-
-<h3 class="text-left col-md-offset-2">Numero de personas:  <%= @details[:persons]%> personas</h3>
-<%if @details[:glass_person]%>
-  <h3 class="text-left col-md-offset-2">Numero de vasos por persona:  <%= @details[:glass_person] %> vasos aproximadamente</h3>
-  <h3 class="text-left col-md-offset-2">Tamaño de vaso elegido:  <%= @details[:size] %></h3>
-<%end%>
-
-<%if @details[:meat]%>
-  <h3 class="text-left col-md-offset-2">Corte con el que acompañara su arrachera:  <%= @details[:meat] %></h3>
-<%end%>
-
-  <h3 class="text-left col-md-offset-2">El total de tu compra es: <%= @total%>.00 mxn</h3>
-
-=======
->>>>>>> c288aab1a0d56fee3403ad6651650cda2c8140ec
