@@ -56,12 +56,6 @@ class PasswordResetsController < ApplicationController
 
     # Checks expiration of reset token.
     def check_expiration
-<<<<<<< HEAD
-     @user.password_reset_expired?
-=======
-      @user.password_reset_expired?
-      @user.password_reset_expired?
->>>>>>> c288aab1a0d56fee3403ad6651650cda2c8140ec
       if @user.password_reset_expired?
         flash[:danger] = "Lo sentimos en tiempo para reiniciar tu contraseña ha expirado"
         redirect_to new_password_reset_url

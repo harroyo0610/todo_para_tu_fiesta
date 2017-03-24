@@ -126,7 +126,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
 
 
 
@@ -134,36 +133,20 @@
   <div class="contact col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">
     <h3 class="t-contact">Ponte en contacto con nosotros <h3>
     <%= form_for Contact.new, :html => {:class => 'form-horizontal' } do |f| %>
+    <div class= "hidden">
+      <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+    </div>
     <%= f.label "Asunto:" %>
     <%= f.text_field :name, :required => true, class: 'form-control' %>
     <%= f.label "Email:" %>
     <%= f.text_field :email, :required => true, class: 'form-control'%>
     <%= f.label "Mensaje" %>
     <%= f.text_area :message, :as => :text, :required => true, :rows => 5, class: 'form-control' %>
-=======
-<div id="div-about" class="div-about col-xs-12 ">
-  <iframe class="col-xs-offset-1 col-xs-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.908182579527!2d-101.17793108475776!3d20.5918069079263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c84d9a015b219%3A0x1788951ab4955a5f!2sPaseo+de+Las+Playas+140%2C+Las+Reynas%2C+36720+Salamanca%2C+Gto.!5e0!3m2!1ses!2smx!4v1489540331335" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  <div class="contact col-xs-offset-1 col-xs-4">
-    <h3>Contacto<h3>
-    <%= form_for Contact.new, :html => {:class => 'form-horizontal' } do |f| %>
-    <%= f.label "Nombre:" %> 
-    <%= f.text_field :name, :required => true, class: 'form-control' %>
-    <%= f.label "Email:" %> 
-    <%= f.text_field :email, :required => true, class: 'form-control'%>
-    <%= f.label "Mensaje:" %>     
-    <%= f.text_field :message, :as => :text, :required => true, class:'form-control' %>
->>>>>>> 3ea28ca2ff802b20a85d51ffb6af069c8751646e
-    <div class= "hidden">
-      <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-    </div>
     <div>
       </br>
       <%= f.submit "Enviar Mensaje", class: "btn btn-primary" %>
-<<<<<<< HEAD
     </div>    
-=======
     </div>
->>>>>>> 3ea28ca2ff802b20a85d51ffb6af069c8751646e
   <% end %>
   </div>
 
