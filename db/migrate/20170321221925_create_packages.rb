@@ -6,7 +6,6 @@ class CreatePackages < ActiveRecord::Migration[5.0]
       t.string      :size
       t.string      :meat
       t.float       :total
-
       t.timestamps
     end
   end

@@ -19,52 +19,10 @@
 }
 
 
-/* menu social */
-*{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing:border-box;
-}
-.social{
-  display:none;
-  position: left;
-  left: 0;
-  top: 200px;
-  z-index: 2000;
-  position: fixed;
-}
-.social ul{
-  list-style: none;
-}
-.social ul li a{
-  display: inline-block;
-  color: #fff;
-  background: #000;
-  padding: 10px 15px;
-  text-decoration: none;
-  transition:all 500ms ease;
-}
-.social ul li .icon-facebook{
-  background-image: url("/assets/fonts/401-facebook.png");
-  background-color: #3b5998;
-}
-.social ul li .icon-whatsapp{
-  background-image: url("/assets/fonts/404-whatsapp.png");
-  background-color: #4dc247;
-}
-.social ul li .icon-mail2{
-  background-image: url("/assets/fonts/389-mail2.png");
-  background-color: #cb2027;
-}
 
-.social ul li a:hover{
-  padding: 10px 10px 10px 50px;
+.t-r{
+  text-align:left;
 }
-
-
-
 /*packs*/
 
 /* sidebar */

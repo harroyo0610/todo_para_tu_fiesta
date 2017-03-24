@@ -12,9 +12,8 @@ class TicketsController < ApplicationController
     if @reservation.save 
       flash[:info] = "Favor de realizar el pago correspondiente"   
       redirect_to package_ticket_path(@package, @reservation)
-      p "+" * 50
-      p @reservation
-      p @user = current_user
+      @reservation.update(status: "comprado")
+      @user = current_user
       @user.send_reserv_email
     else
       flash[:info] = "Por favor intenta nuevamente llenando todos los campos requeridos"   

@@ -1,10 +1,15 @@
-<h3>Historial de compras del usuario</h3>
-<div class="row">
-  <aside class="col-md-4">
+<h1 class="text-center">Historial de compras del usuario</h1>
+<div>
     <section class="user_info">
-      <h3>
-        <%= @user.reservations%>
-      </h3>
+        <% @user.reservations.each_with_index do |reservation, index| %>
+          <h2 class="t-r col-xs-12 col-md-8 col-md-offset-2">Reservación numero <%=  index + 1 %>:</h2>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Nombre: <%= reservation.name %></h3>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Total: <%= reservation.total %></h3>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Estatus: <%= reservation.status %></h3>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Dirección del pedido: <%= reservation.address %></h3>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Fecha: <%= reservation.date %></h3>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Hora: <%= reservation.time %></h3>
+          <h3 class="t-r col-xs-12 col-md-8 col-md-offset-2">Número: <%= reservation.phone %></h3>
+        <% end %>
     </section>
-  </aside>
 </div>
