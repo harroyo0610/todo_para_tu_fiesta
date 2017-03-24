@@ -21,21 +21,21 @@
     <h1 class="text-center col-xs-12 col-md-12">Elige un paquete</h1>
     <div class="col-xs-12 col-md-12">
       <div class="div-details-packs col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-1">
-        <img class="img-packs center-block" src="assets/mix.png">
+        <%= image_tag "mix.png", class: 'img-packs center-block' %>
         <h3 class="text-center">Paquete Mix</h3>
         <p class="text-center">Aquì encontraras los paquetes que son para cotizar tu mix</p>
         <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index" }, class: "btn btn-lg btn-packs center-block" %>
       </div>
       
       <div class="div-details-packs col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-1">
-        <img class="img-packs center-block" src="assets/beer.png">
+        <%= image_tag "beer.png", class: 'img-packs center-block' %>
         <h3 class="text-center">Paquete Cerveza</h3>
         <p class="text-center">Aquì encontraras los paquetes que son para cotizar tu alcohol</p>
         <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index"}, class: "btn btn-lg btn-packs center-block" %>
       </div>
 
       <div class="div-details-packs col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-1">
-        <img class="img-packs center-block" src="assets/meat.png">
+        <%= image_tag "meat.png", class: 'img-packs center-block' %>
         <h3 class="text-center">Paquete Asado</h3>
         <p class="text-center">Aquì encontraras los paquetes que son para cotizar tu asado</p>
         <%= link_to "Elige tu paquete aqui!",  { controller: "packages", action: "index" }, class: "btn btn-lg btn-packs center-block" %>
@@ -136,11 +136,11 @@
     <div class= "hidden">
       <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
     </div>
-    <%= f.label "Asunto:" %>
+    <%= f.label "Nombre:" %>
     <%= f.text_field :name, :required => true, class: 'form-control' %>
     <%= f.label "Email:" %>
     <%= f.text_field :email, :required => true, class: 'form-control'%>
-    <%= f.label "Mensaje" %>
+    <%= f.label "Mensaje:" %>
     <%= f.text_area :message, :as => :text, :required => true, :rows => 5, class: 'form-control' %>
     <div>
       </br>
@@ -149,7 +149,7 @@
     </div>
   <% end %>
   </div>
-
+  <h3 class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">Encuentranos aqui: <h3>
   <iframe class="col-xs-offset-1 col-xs-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.908182579527!2d-101.17793108475776!3d20.5918069079263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c84d9a015b219%3A0x1788951ab4955a5f!2sPaseo+de+Las+Playas+140%2C+Las+Reynas%2C+36720+Salamanca%2C+Gto.!5e0!3m2!1ses!2smx!4v1489540331335" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
    <h5 class="text-center col-xs-12 col-md-12"><strong>Todos los derechos reservados 2017 de Todo para tu fiesta es una marca registrada</strong></h5>
 
