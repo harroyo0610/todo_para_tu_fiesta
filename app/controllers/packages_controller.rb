@@ -21,7 +21,11 @@ class PackagesController < ApplicationController
     @package = Package.new(package_params)
     @package.update(total: @total)
     if !logged_in? 
+<<<<<<< HEAD
       flash[:danger] = "Para continuar necesitas registrarte o iniciar una sessión"
+=======
+      flash[:danger] = "para continuar necesitas registrarte o iniciar una sessión"
+>>>>>>> 3ea28ca2ff802b20a85d51ffb6af069c8751646e
       redirect_to login_url
     elsif !@package.save
          render 'index'  

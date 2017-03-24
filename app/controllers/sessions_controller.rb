@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         redirect_to root_url #redirige a la pagina de perfil del usuario
       else
         message = "Cuenta no Activada"
-        message += "Verifica tu bandeja de entrada para activa tu cuenta "
+        message += "Verifica tu bandeja de entrada de correo no deseado para activar tu cuenta "
         flash[:warning] = message 
         redirect_to root_url
      end 

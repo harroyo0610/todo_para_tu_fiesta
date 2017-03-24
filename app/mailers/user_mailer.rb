@@ -9,4 +9,10 @@ class UserMailer < ApplicationMailer
   	mail to: user.email, subject: "Reinicio De Contraseña"
   end
 
+  def reserv_package(user)
+   	@user = user
+  	mail to: user.email, subject: "Pedido"
+  end
+
+
 end
