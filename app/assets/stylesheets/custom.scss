@@ -19,55 +19,6 @@
 }
 
 
-/*Icons social*/
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?4jx6lw');
-  src:  url('fonts/icomoon.eot?4jx6lw#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?4jx6lw') format('truetype'),
-    url('fonts/icomoon.woff?4jx6lw') format('woff'),
-    url('fonts/icomoon.svg?4jx6lw#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-.icon-mail2:before {
-  content: "\ea84";
-}
-
-.icon-google:before {
-  content: "\ea88";
-}
-.icon-google2:before {
-  content: "\ea89";
-}
-.icon-google3:before {
-  content: "\ea8a";
-}
-.icon-facebook:before {
-  content: "\ea90";
-}
-.icon-whatsapp:before {
-  content: "\ea93";
-}
-
 /* menu social */
 *{
   margin: 0;
@@ -97,12 +48,15 @@
 }
 .social ul li .icon-facebook{
   background-image: url("/assets/fonts/401-facebook.png");
+  background-color: #3b5998;
 }
 .social ul li .icon-whatsapp{
   background-image: url("/assets/fonts/404-whatsapp.png");
+  background-color: #4dc247;
 }
 .social ul li .icon-mail2{
   background-image: url("/assets/fonts/389-mail2.png");
+  background-color: #cb2027;
 }
 
 .social ul li a:hover{
